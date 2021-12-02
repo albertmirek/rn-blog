@@ -1,5 +1,5 @@
 import React, {useState, useContext} from 'react';
-import {StyleSheet, View, Button} from 'react-native';
+import {StyleSheet, View, Button, SafeAreaView} from 'react-native';
 
 import {PostsContext} from '../navigation/PostsProvider';
 import {HeadingPost, TextPost} from '../atoms';
@@ -25,7 +25,7 @@ export function PostDetailScreen({navigation, route}) {
   };
 
   return (
-    <View style={styles.contrainer}>
+    <SafeAreaView style={styles.contrainer}>
       <View style={styles.inputContainer}>
         <HeadingPost heading={title} onChange={title => setHeading(title)} />
         <TextPost text={description} onChange={text => setText(text)} />
@@ -38,7 +38,7 @@ export function PostDetailScreen({navigation, route}) {
         />
         <Button title="Save" onPress={() => onSaveHandler(id, heading, text)} />
       </View>
-    </View>
+    </SafeAreaView>
   );
 }
 
