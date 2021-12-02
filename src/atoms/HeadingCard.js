@@ -1,6 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet, TextInput} from 'react-native';
-import {windowWidth} from '../utils/Dimensions';
+import {Text} from 'react-native';
 export function HeadingCard({children}) {
   return <Text style={{}}>{children}</Text>;
 }

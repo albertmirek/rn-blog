@@ -1,5 +1,5 @@
 import React from 'react';
-import {ScrollView} from 'react-native';
+import {ScrollView, Text} from 'react-native';
 import {PostCard} from '../molecules';
 export function PostsList({posts, navigation}) {
   const clickOptionHandler = post => {
@@ -9,18 +9,26 @@ export function PostsList({posts, navigation}) {
       description: `${post.description}`,
     });
   };
+
   return (
     <ScrollView>
-      {posts.map(post => {
-        return (
-          <PostCard
-            pressed={() => clickOptionHandler(post)}
-            key={post.id}
-            title={post.title}
-            description={post.description}
-          />
-        );
-      })}
+      {posts.length != 0 ? (
+        posts.map(post => {
+          return (
+            <PostCard
+              pressed={() => clickOptionHandler(post)}
+              key={post.id}
+              title={post.title}
+              description={post.description}
+            />
+          );
+        })
+      ) : (
+        <Text style={{alignSelf: 'center'}}>
+          No posts yet. Head on and create some!
+        </Text>
+      )}
+      {}
     </ScrollView>
   );
 }

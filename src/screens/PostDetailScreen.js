@@ -1,8 +1,8 @@
 import React, {useState, useContext} from 'react';
-import {StyleSheet, Text, View, Button} from 'react-native';
-import {windowHeight, windowWidth} from '../utils/Dimensions';
+import {StyleSheet, View, Button} from 'react-native';
+
 import {PostsContext} from '../navigation/PostsProvider';
-import {HeadingPost, SubmitButton, TextPost, PostButton} from '../atoms';
+import {HeadingPost, TextPost} from '../atoms';
 
 export function PostDetailScreen({navigation, route}) {
   const {removePost, save, post} = useContext(PostsContext);

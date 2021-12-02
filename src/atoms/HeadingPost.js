@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet, TextInput} from 'react-native';
+import {TextInput} from 'react-native';
 import {windowWidth} from '../utils/Dimensions';
 export function HeadingPost({heading, onChange}) {
   return (

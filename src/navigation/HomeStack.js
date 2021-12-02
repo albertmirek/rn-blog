@@ -1,7 +1,6 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {HomeScreen, PostDetailScreen, CreatePostScreen} from '../screens';
-import {Button} from 'react-native';
 
 const Stack = createNativeStackNavigator();
 

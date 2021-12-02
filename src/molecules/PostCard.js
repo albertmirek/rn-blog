@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, StyleSheet, TouchableOpacity} from 'react-native';
 import {HeadingCard, DescriptionCard, CreateButton} from '../atoms';
-import {windowHeight, windowWidth} from '../utils/Dimensions';
+import {windowWidth} from '../utils/Dimensions';
 
 export function PostCard({id, title, description, pressed}) {
   return (

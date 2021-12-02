@@ -1,8 +1,6 @@
 import React, {createContext, useState} from 'react';
 
-export const PostsContext = createContext({
-  posts: [],
-});
+export const PostsContext = createContext({});
 
 export const PostsProvider = ({children}) => {
   const post = {
@@ -10,19 +8,7 @@ export const PostsProvider = ({children}) => {
     title: '',
     description: '',
   };
-  const [posts, setPosts] = useState([
-    // {
-    //   id: 1,
-    //   title: 'Title1',
-    //   description: 'LOREM IPSUM,ATDASD ASDASD ASD A',
-    // },
-    // {
-    //   id: 2,
-    //   title: 'Title2',
-    //   description:
-    //     'LOREM IPSUM,ATDASD ASDASD ASD ALOREM IPSUM,ATDASD ASDASD ASD A',
-    // },
-  ]);
+  const [posts, setPosts] = useState([]);
 
   return (
     <PostsContext.Provider
@@ -57,12 +43,6 @@ export const PostsProvider = ({children}) => {
           } else {
             post.id = 1;
             setPosts(prevPosts => [...prevPosts, post]);
-            // setPosts(...posts, [...posts, post]);
-            // console.log('empty');
-            // let arr = posts;
-            // arr.push(post);
-            // console.log(arr);
-            // setPosts(prevArray => [...prevArray, arr]);
           }
         },
       }}>

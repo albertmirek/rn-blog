@@ -1,17 +1,11 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext} from 'react';
 import {StyleSheet, Text, View, SafeAreaView, Button} from 'react-native';
 import {PostsContext} from '../navigation/PostsProvider';
-import {windowHeight, windowWidth} from '../utils/Dimensions';
+import {windowWidth} from '../utils/Dimensions';
 import {PostsList} from '../organisms';
 
 export function HomeScreen({navigation}) {
   const {posts} = useContext(PostsContext);
-
-  console.log(posts);
-  // let newPosts = posts;
-  // useEffect(() => {
-  //   newPosts = posts;
-  // }, [posts]);
 
   return (
     <SafeAreaView style={styles.contrainer}>
